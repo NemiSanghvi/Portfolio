@@ -2,7 +2,7 @@ import myImage from './assets/image-bg-login.jpg';
 import 'animate.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import Info from '/Users/Nemi/OneDrive/Desktop/Coding/portfolio/src/Components/Info';
+import Info from './Components/Info';
 import Socials from './Components/Socials';
 import { Link } from 'react-router-dom';
 
