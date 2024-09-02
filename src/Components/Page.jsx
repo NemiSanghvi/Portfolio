@@ -1,5 +1,5 @@
 import React from 'react'
-import Card from './card'
+import Card from './Card'
 import myPrj1 from '/Users/Nemi/OneDrive/Desktop/Coding/portfolio/src/assets/prj2.png'
 import myPrj2 from '/Users/Nemi/OneDrive/Desktop/Coding/portfolio/src/assets/calculator.png'
 import myPrj3 from '/Users/Nemi/OneDrive/Desktop/Coding/portfolio/src/assets/movie-mania.png'
