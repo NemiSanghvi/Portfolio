@@ -1,8 +1,8 @@
 import React from 'react'
 import Card from './Card'
-import myPrj1 from '/Users/Nemi/OneDrive/Desktop/Coding/portfolio/src/assets/prj2.png'
-import myPrj2 from '/Users/Nemi/OneDrive/Desktop/Coding/portfolio/src/assets/calculator.png'
-import myPrj3 from '/Users/Nemi/OneDrive/Desktop/Coding/portfolio/src/assets/movie-mania.png'
+import myPrj1 from '../assets/prj2.png'
+import myPrj2 from '../assets/calculator.png'
+import myPrj3 from '../assets/movie-mania.png'
 import { MdOutlineArrowBackIos } from "react-icons/md";
 import { Link } from 'react-router-dom'
 
