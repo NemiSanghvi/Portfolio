@@ -2,7 +2,7 @@ import myImage from './assets/image-bg-login.jpg';
 import 'animate.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import Info from './Components/Info';
+import About from './Components/About';
 import Socials from './Components/Socials';
 import { Link } from 'react-router-dom';
 
@@ -10,7 +10,7 @@ const App = () => {
   return (
     <>
       <div className="h-full md:h-screen w-full bg-[#393333] flex flex-col ">
-        <Info />
+        <About />
         <Socials />
         <div className="flex flex-col md:flex-row justify-center items-start w-full px-6 md:px-12 lg:px-24 mt-16 md:mt-20 lg:mt-24 space-y-8 md:space-y-0">
           <div className="md:w-1/2 text-center md:text-left">
