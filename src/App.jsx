@@ -10,7 +10,7 @@ import resume from './assets/Resume.pdf'
 const App = () => {
   return (
     <>
-      <div className="h-full md:h-screen w-full bg-[#393333] flex flex-col ">
+      <div className="h-max md:h-full lg:h-screen w-full bg-[#393333] flex flex-col ">
         <About />
         <Socials />
         <div className="flex flex-col md:flex-row justify-center items-start w-full px-6 md:px-12 lg:px-24 mt-16 md:mt-20 lg:mt-24 space-y-8 md:space-y-0">
