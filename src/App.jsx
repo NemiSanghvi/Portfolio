@@ -5,7 +5,7 @@ import './App.css';
 import About from './Components/About';
 import Socials from './Components/Socials';
 import { Link } from 'react-router-dom';
-import resume from './assets/resume.pdf'
+import resume from './assets/Resume.pdf'
 
 const App = () => {
   return (
