@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+::selection {
+  color: cadetblue;
+}
+
+body {
+  font-family: "Comic Neue", sans-serif;
+}
