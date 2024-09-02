@@ -12,7 +12,7 @@ function MyVerticallyCenteredModal(props) {
     >
       <Modal.Header className="bg-gray-400 text-[#36331c] border-none" closeButton>
         <Modal.Title id="contained-modal-title-vcenter" className="text-lg md:text-2xl">
-          About Me
+          About  Me
         </Modal.Title>
       </Modal.Header>
       <Modal.Body className="bg-gray-400 text-[#36331c] border-none">
