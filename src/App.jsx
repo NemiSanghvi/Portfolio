@@ -1,10 +1,11 @@
-import myImage from './assets/image-bg-login.jpg';
+import myImage from './assets/profileimage.jpg';
 import 'animate.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import About from './Components/About';
 import Socials from './Components/Socials';
 import { Link } from 'react-router-dom';
+import resume from './assets/resume.pdf'
 
 const App = () => {
   return (
@@ -30,9 +31,9 @@ const App = () => {
 
 
         <div className="flex flex-col md:flex-row md:ml-28 ml-28 justify-center md:justify-start items-center md:items-start w-2/5 mt-16 space-y-4 md:space-y-0 md:space-x-32">
-          <button className="w-40 md:w-48 h-16 bg-[#ffad00] text-2xl text-center border-2 border-[#393333] rounded-md transition duration-200 hover:bg-[#393333] hover:text-yellow-100 hover:underline">
+          <a href={resume} download='resume'> <button className="w-40 md:w-48 h-16 bg-[#ffad00] text-2xl text-center border-2 border-[#393333] rounded-md transition duration-200 hover:bg-[#393333] hover:text-yellow-100 hover:underline">
             Resume
-          </button>
+          </button></a>
           <Link to={`/projects`}>
             <button className="w-40 md:w-48 h-16 bg-[#ffad00] text-2xl text-center border-2 border-[#393333] rounded-md transition duration-200 hover:bg-[#393333] hover:text-yellow-100 hover:underline">
               Projects

@@ -17,9 +17,9 @@ function Page() {
 
       </div>
       <div className='flex flex-col md:flex-row mt-5'>
-        <Card title="hello" desc="Prj0" src={myPrj1} />
-        <Card title="hello" desc="Prj01" src={myPrj2} />
-        <Card title="hello" desc="Prj002" src={myPrj3} />
+        <Card title="Task-Board" desc="A React app for practicing package integration with a visually appealing to-do list. It offers interactive features for users to manage tasks and experiment with various functionalities." src={myPrj1} />
+        <Card title="Calculator" desc="A custom calculator app built with React, CSS, and HTML. Manual coding of all logic enhanced my React skills and posed a one-day challenge. Feedback on UI improvements is welcome." src={myPrj2} />
+        <Card title="Movie mania" desc="A movie-themed web app built with React.js and Tailwind CSS, deployed on Vercel. Showcases front-end development skills and responsive design. Feedback and suggestions are welcome." src={myPrj3} />
         {/* <Card title="hello" desc="Prj002" src={myPrj1} /> */}
 
       </div>
