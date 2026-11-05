@@ -15,6 +15,7 @@ interface SkillCategory {
   skills: Skill[];
 }
 
+
 const TOOLKIT: SkillCategory[] = [
   {
     id: "frontend",
@@ -25,6 +26,7 @@ const TOOLKIT: SkillCategory[] = [
       { name: "TypeScript" },
       { name: "Tailwind CSS" },
       { name: "Motion / Framer Motion" },
+      { name: "HTML & CSS" },
       { name: "CSS & SVG Animation" },
     ],
   },
@@ -32,10 +34,12 @@ const TOOLKIT: SkillCategory[] = [
     id: "backend",
     label: "Backend",
     skills: [
-      { name: "Node.js" },
+      { name: "Node.js", note: "primary" },
       { name: "Express.js" },
+      { name: "Ruby on Rails" },
       { name: "REST APIs" },
-      { name: "Auth patterns" },
+      { name: "Authentication & RBAC" },
+      { name: "Background Jobs & Scheduling" },
     ],
   },
   {
@@ -44,7 +48,7 @@ const TOOLKIT: SkillCategory[] = [
     skills: [
       { name: "JavaScript", note: "primary" },
       { name: "TypeScript", note: "primary" },
-      { name: "HTML & CSS" },
+      { name: "Ruby" },
       { name: "Python", note: "learning" },
     ],
   },
@@ -53,9 +57,8 @@ const TOOLKIT: SkillCategory[] = [
     label: "Databases",
     skills: [
       { name: "PostgreSQL" },
+      { name: "MySQL" },
       { name: "MongoDB" },
-      { name: "Prisma ORM" },
-      { name: "Supabase" },
     ],
   },
   {
@@ -63,20 +66,23 @@ const TOOLKIT: SkillCategory[] = [
     label: "Tools & Workflow",
     skills: [
       { name: "Git & GitHub" },
-      { name: "Figma" },
+      { name: "React Native" },
+      { name: "Electron.js" },
       { name: "VS Code" },
-      { name: "Vercel / Netlify" },
+      { name: "Figma" },
+      { name: "Vercel" },
       { name: "Linux" },
     ],
   },
 ];
+
 
 export default function SkillsSection() {
   return (
     <section
       id="skills"
       className="relative overflow-hidden py-24 md:py-36"
-      style={{ backgroundColor: "#272727" }}
+      style={{ backgroundColor: "#2A2A2A" }}
     >
       {/* Top separator */}
       <div
@@ -206,11 +212,11 @@ export default function SkillsSection() {
           whileInView="visible"
           viewport={VIEWPORT_ONCE}
         >
-          <ConstructionLine length={40} opacity={0.2} />
-          <span
-            className="font-mono text-[10px] tracking-widest"
-            style={{ color: "#4A4A4A", letterSpacing: "0.2em" }}
-          >
+          <ConstructionLine length={40} opacity={0.5} />
+         <span
+  className="font-mono text-[10px] tracking-widest"
+  style={{ color: "#8A8A8A", letterSpacing: "0.2em" }}
+>
             Continuously evolving — last updated 2026
           </span>
         </motion.div>

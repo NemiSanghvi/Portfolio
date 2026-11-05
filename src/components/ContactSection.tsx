@@ -16,16 +16,16 @@ import {
 
 const SOCIAL_LINKS = [
   {
-    label: "GitHub",
-    handle: "NemiSanghvi",
-    href: "https://github.com/NemiSanghvi",
-    note: "Code",
-  },
-  {
     label: "LinkedIn",
     handle: "Nemi Sanghvi",
     href: "https://linkedin.com/in/nemi-sanghvi-48778b2b0",
     note: "Professional",
+  },
+  {
+    label: "GitHub",
+    handle: "NemiSanghvi",
+    href: "https://github.com/NemiSanghvi",
+    note: "Code",
   },
 ];
 
@@ -34,7 +34,7 @@ export default function ContactSection() {
     <section
       id="contact"
       className="relative overflow-hidden py-24 md:py-36"
-      style={{ backgroundColor: "#252525" }}
+      style={{ backgroundColor: "#2A2A2A" }}
     >
       {/* Top separator */}
       <div
@@ -57,7 +57,7 @@ export default function ContactSection() {
             letterSpacing: "-0.05em",
           }}
         >
-          Let&apos;s build.
+          Let&apos;s Connect
         </span>
       </div>
 

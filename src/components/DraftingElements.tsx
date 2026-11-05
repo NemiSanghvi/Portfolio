@@ -97,7 +97,7 @@ export function SectionLabel({
   color = "#D5851F",
 }: {
   number: string;
-  label: string;
+  label?: string;
   color?: string;
 }) {
   return (
@@ -109,12 +109,14 @@ export function SectionLabel({
         CHAPTER {number}
       </span>
 
-      <h3
-        className="text-2xl md:text-3xl font-medium tracking-tight"
-        style={{ color: "#C0C0C0" }}
-      >
-        {label}
-      </h3>
+      {label && (
+        <h3
+          className="text-2xl md:text-3xl font-medium tracking-tight"
+          style={{ color: "#C0C0C0" }}
+        >
+          {label}
+        </h3>
+      )}
     </div>
   );
 }

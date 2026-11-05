@@ -154,11 +154,11 @@ export default function AboutSection() {
               style={{ color: "#8A8A8A" }}
             >
               I&apos;m a Full Stack developer who enjoys working at the
-              intersection of engineering and design. I'm someone who's been
+              intersection of engineering and design. I&apos;m someone who&apos;s been
               curious about technology for as long as I can remember. What
               started as an early interest eventually led me to Computer Science
               and into the world of Full Stack development. I enjoy building
-              applications from the ground up, especially when there's a real
+              applications from the ground up, especially when there&apos;s a real
               problem to solve and an idea to bring to life.
             </motion.p>
 
@@ -168,8 +168,8 @@ export default function AboutSection() {
               style={{ color: "#6A6A6A" }}
             >
               I have a bit of a problem: the more I learn, the more I want to
-              learn. Every new concept opens up ten more  But that's the fun of it
-              there's always something new to explore, break, understand, and
+              learn. Every new concept opens up ten more. But that&apos;s the fun of it —
+              there&apos;s always something new to explore, break, understand, and
               build.
             </motion.p>
           </motion.div>

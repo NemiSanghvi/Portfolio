@@ -1,45 +1,71 @@
+
 "use client";
 
 import { motion } from "motion/react";
-import { SectionLabel, AmberDot, ConstructionLine } from "@/components/DraftingElements";
-import { fadeUp, fadeIn, staggerChildren, VIEWPORT_ONCE } from "@/lib/animations";
+import {
+  SectionLabel,
+  AmberDot,
+  ConstructionLine,
+} from "@/components/DraftingElements";
+import {
+  fadeUp,
+  fadeIn,
+  staggerChildren,
+  VIEWPORT_ONCE,
+} from "@/lib/animations";
 
 const STAGES = [
   {
     number: "01",
-    title: "Discover",
-    subtitle: "Understand the problem",
+    title: "Understand",
+    subtitle: "Start with the problem",
     description:
-      "Ask questions before touching a keyboard. What is the goal? Who will use this? What does success look like? Good engineering starts with sharp thinking.",
-    details: ["User research", "Problem framing", "Competitive analysis", "Requirements mapping"],
-    svgPath: "M 10 40 C 40 10, 80 10, 100 40 C 120 70, 90 90, 60 70 C 30 50, 20 70, 10 40 Z",
+      "Before thinking about the solution, I try to understand the problem. What are we trying to solve, who is it for, and what would make the result genuinely useful?",
+    details: [
+      "Problem understanding",
+      "Requirements gathering",
+      "Breaking down ideas",
+      "Defining priorities",
+    ],
   },
   {
     number: "02",
-    title: "Design",
-    subtitle: "Plan the experience",
+    title: "Explore",
+    subtitle: "Find a way forward",
     description:
-      "Sketch the structure before writing any code. Think in components, flows and visual hierarchy. Constraint leads to clarity.",
-    details: ["Wireframing", "Component architecture", "Accessibility planning", "Responsive strategy"],
-    svgPath: "M 10 10 L 90 10 L 100 90 L 0 90 Z",
+      "There is rarely just one way to build something. I explore possible approaches, learn what I need, and choose tools and technologies that make sense for the problem.",
+    details: [
+      "Exploring solutions",
+      "Technology selection",
+      "Planning architecture",
+      "Learning as needed",
+    ],
   },
   {
     number: "03",
-    title: "Develop",
-    subtitle: "Build the solution",
+    title: "Build",
+    subtitle: "Turn ideas into reality",
     description:
-      "Write code that communicates intent. Prioritise maintainability alongside functionality. Build in layers, test as you go.",
-    details: ["Component development", "State management", "API integration", "Performance tuning"],
-    svgPath: "M 50 5 L 95 90 L 5 90 Z",
+      "This is where ideas take shape. I build incrementally, connect the pieces, experiment with different approaches, and work through challenges as they come up.",
+    details: [
+      "Frontend development",
+      "Backend development",
+      "API integration",
+      "Problem solving",
+    ],
   },
   {
     number: "04",
-    title: "Refine",
-    subtitle: "Test and improve",
+    title: "Improve",
+    subtitle: "Make it work better",
     description:
-      "Ship, then listen. Gather feedback, measure what matters, and make meaningful iterations. The best work is never truly finished.",
-    details: ["Cross-browser testing", "Lighthouse audit", "User feedback", "Continuous improvement"],
-    svgPath: "M 50 5 L 95 50 L 50 95 L 5 50 Z",
+      "Getting something working is only part of the job. I test, debug, refine the experience, and look for opportunities to make the solution more reliable and maintainable.",
+    details: [
+      "Testing and debugging",
+      "Handling edge cases",
+      "Performance refinement",
+      "Continuous learning",
+    ],
   },
 ];
 
@@ -48,7 +74,7 @@ export default function ProcessSection() {
     <section
       id="process"
       className="relative overflow-hidden py-24 md:py-36"
-      style={{ backgroundColor: "#252525" }}
+      style={{ backgroundColor: "#2A2A2A" }}
     >
       {/* Subtle gradient separator at top */}
       <div
@@ -84,6 +110,7 @@ export default function ProcessSection() {
           <motion.div variants={fadeIn}>
             <SectionLabel number="04" label="My Process" />
           </motion.div>
+
           <motion.h2
             variants={fadeUp}
             className="mt-6 text-3xl md:text-5xl xl:text-6xl font-light leading-tight"
@@ -93,7 +120,7 @@ export default function ProcessSection() {
           </motion.h2>
         </motion.div>
 
-        {/* Process stages — connected with construction lines */}
+        {/* Process stages */}
         <div className="relative">
           {/* Vertical connector line — desktop only */}
           <div
@@ -117,13 +144,13 @@ export default function ProcessSection() {
                 variants={fadeUp}
                 className="relative grid grid-cols-1 md:grid-cols-[5rem_1fr] gap-6 md:gap-10 md:pb-16 last:pb-0"
               >
-                {/* Stage number with circle — on the vertical line */}
+                {/* Stage number */}
                 <div className="flex md:flex-col items-center gap-4 md:gap-0 md:items-center">
                   <div
                     className="relative z-10 flex items-center justify-center w-9 h-9 rounded-full flex-shrink-0 transition-colors duration-300"
                     style={{
                       border: "1px solid rgba(213,133,31,0.5)",
-                      backgroundColor: "#252525",
+                      backgroundColor: "#2A2A2A",
                     }}
                   >
                     <span
@@ -137,19 +164,27 @@ export default function ProcessSection() {
 
                 {/* Stage content */}
                 <div className="flex flex-col gap-5">
-                  {/* Title row */}
+                  {/* Title and subtitle */}
                   <div>
                     <div className="flex items-center gap-3 mb-1">
                       <h3
                         className="text-xl md:text-2xl font-light"
-                        style={{ color: "#C0C0C0", letterSpacing: "-0.01em" }}
+                        style={{
+                          color: "#C0C0C0",
+                          letterSpacing: "-0.01em",
+                        }}
                       >
                         {stage.title}
                       </h3>
                     </div>
+
                     <p
                       className="font-mono text-xs tracking-widest"
-                      style={{ color: "#D5851F", opacity: 0.7, letterSpacing: "0.15em" }}
+                      style={{
+                        color: "#D5851F",
+                        opacity: 0.7,
+                        letterSpacing: "0.15em",
+                      }}
                     >
                       {stage.subtitle}
                     </p>
@@ -164,7 +199,7 @@ export default function ProcessSection() {
                   {/* Description */}
                   <p
                     className="text-sm md:text-base leading-relaxed max-w-lg"
-                    style={{ color: "#7A7A7A" }}
+                    style={{ color: "#A0A0A0" }}
                   >
                     {stage.description}
                   </p>
@@ -176,7 +211,7 @@ export default function ProcessSection() {
                         key={detail}
                         className="font-mono text-xs px-3 py-1"
                         style={{
-                          color: "#5A5A5A",
+                          color: "#8A8A8A",
                           border: "1px solid rgba(192,192,192,0.08)",
                           letterSpacing: "0.08em",
                         }}
@@ -194,4 +229,3 @@ export default function ProcessSection() {
     </section>
   );
 }
-

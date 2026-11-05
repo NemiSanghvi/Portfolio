@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "motion/react";
-import { SectionLabel, AmberDot, ConstructionLine } from "@/components/DraftingElements";
+import { AmberDot, ConstructionLine } from "@/components/DraftingElements";
 import { fadeUp, fadeIn, staggerChildren, scaleIn, VIEWPORT_ONCE } from "@/lib/animations";
 
 // Placeholder interest cards — each with a different visual treatment
