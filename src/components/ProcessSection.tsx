@@ -82,7 +82,7 @@ export default function ProcessSection() {
           viewport={VIEWPORT_ONCE}
         >
           <motion.div variants={fadeIn}>
-            <SectionLabel number="05" label="My Process" />
+            <SectionLabel number="04" label="My Process" />
           </motion.div>
           <motion.h2
             variants={fadeUp}

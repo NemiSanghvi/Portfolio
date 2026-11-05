@@ -92,22 +92,29 @@ export function CrossMark({
 
 // Section label in engineering annotation style
 export function SectionLabel({
+  number,
   label,
-  color = "#8A8A8A",
+  color = "#D5851F",
 }: {
   number: string;
   label: string;
   color?: string;
 }) {
   return (
-    <div className="flex items-center gap-3" aria-hidden="true">
-      <span className="h-px w-8" style={{ backgroundColor: color, opacity: 0.4 }} />
+    <div className="flex flex-col items-start gap-2">
       <span
-        className="font-mono text-xs tracking-widest uppercase"
-        style={{ color, letterSpacing: "0.18em" }}
+        className="font-mono text-xs uppercase tracking-[0.2em]"
+        style={{ color }}
+      >
+        CHAPTER {number}
+      </span>
+
+      <h3
+        className="text-2xl md:text-3xl font-medium tracking-tight"
+        style={{ color: "#C0C0C0" }}
       >
         {label}
-      </span>
+      </h3>
     </div>
   );
 }

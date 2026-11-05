@@ -133,9 +133,6 @@ export default function BeyondSection() {
           whileInView="visible"
           viewport={VIEWPORT_ONCE}
         >
-          <motion.div variants={fadeIn}>
-            <SectionLabel number="06" label="Fun Beyond Work" />
-          </motion.div>
           <motion.h2
             variants={fadeUp}
             className="mt-6 text-3xl md:text-5xl xl:text-6xl font-light leading-tight"

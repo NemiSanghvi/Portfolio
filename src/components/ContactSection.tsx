@@ -1,20 +1,30 @@
 "use client";
 
 import { motion } from "motion/react";
-import { SectionLabel, AmberDot, ConstructionLine, CornerBracket } from "@/components/DraftingElements";
-import { fadeUp, fadeIn, staggerChildren, VIEWPORT_ONCE } from "@/lib/animations";
+import {
+  SectionLabel,
+  AmberDot,
+  ConstructionLine,
+  CornerBracket,
+} from "@/components/DraftingElements";
+import {
+  fadeUp,
+  fadeIn,
+  staggerChildren,
+  VIEWPORT_ONCE,
+} from "@/lib/animations";
 
 const SOCIAL_LINKS = [
   {
     label: "GitHub",
-    handle: "@[your-username]",
-    href: "https://github.com/",
+    handle: "NemiSanghvi",
+    href: "https://github.com/NemiSanghvi",
     note: "Code",
   },
   {
     label: "LinkedIn",
     handle: "Nemi Sanghvi",
-    href: "https://linkedin.com/",
+    href: "https://linkedin.com/in/nemi-sanghvi-48778b2b0",
     note: "Professional",
   },
 ];
@@ -26,7 +36,7 @@ export default function ContactSection() {
       className="relative overflow-hidden py-24 md:py-36"
       style={{ backgroundColor: "#252525" }}
     >
-      {/* Top separator — strong amber accent */}
+      {/* Top separator */}
       <div
         className="absolute top-0 left-0 right-0 h-px"
         style={{
@@ -42,9 +52,12 @@ export default function ContactSection() {
       >
         <span
           className="font-mono text-[8rem] md:text-[14rem] font-light leading-none"
-          style={{ color: "rgba(192,192,192,0.025)", letterSpacing: "-0.05em" }}
+          style={{
+            color: "rgba(192,192,192,0.025)",
+            letterSpacing: "-0.05em",
+          }}
         >
-          Let&rsquo;s build.
+          Let&apos;s build.
         </span>
       </div>
 
@@ -52,6 +65,7 @@ export default function ContactSection() {
       <div className="absolute top-8 left-8 hidden md:block">
         <CornerBracket size={32} opacity={0.2} />
       </div>
+
       <div
         className="absolute top-8 right-8 hidden md:block"
         style={{ transform: "scaleX(-1)" }}
@@ -68,7 +82,7 @@ export default function ContactSection() {
           viewport={VIEWPORT_ONCE}
           className="mb-14 md:mb-20"
         >
-          <SectionLabel number="07" label="Contact" />
+          <SectionLabel number="05" label="Contact Me" />
         </motion.div>
 
         {/* Main heading */}
@@ -100,9 +114,11 @@ export default function ContactSection() {
             className="max-w-lg text-base md:text-lg leading-relaxed"
             style={{ color: "#6A6A6A" }}
           >
-            [PLACEHOLDER] Whether it&rsquo;s a project, an opportunity or just a conversation —
-            I&rsquo;d love to hear from you. I&rsquo;m particularly interested in roles where
-            design and engineering overlap.
+            I&apos;m always up for a good conversation, an interesting
+            challenge, or an idea worth exploring. Whether you have an
+            opportunity in mind, want to collaborate, or simply want to talk
+            tech, my inbox is open. I&apos;m currently exploring Full Stack
+            Developer opportunities and would love to connect.
           </motion.p>
         </motion.div>
 
@@ -115,23 +131,25 @@ export default function ContactSection() {
           className="mb-16"
         >
           <a
-            href="mailto:hello@[yourdomain].com"
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=nemisanghvi009@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
             className="group inline-flex items-center gap-4 transition-colors duration-300"
           >
-            {/* Label */}
             <span
-              className="font-mono text-xs tracking-widest uppercase"
+              className="font-mono text-xl tracking-widest uppercase"
               style={{ color: "#5A5A5A", letterSpacing: "0.2em" }}
             >
               Email
             </span>
-            <ConstructionLine length={32} opacity={0.25} />
-            {/* Address */}
+
+            <ConstructionLine length={20} opacity={0.25} />
+
             <span
               className="text-xl md:text-2xl xl:text-3xl font-light transition-colors duration-300 group-hover:text-[#D5851F]"
               style={{ color: "#C0C0C0", letterSpacing: "-0.01em" }}
             >
-              hello@[yourdomain].com
+              nemisanghvi009@gmail.com
             </span>
           </a>
         </motion.div>
@@ -163,6 +181,7 @@ export default function ContactSection() {
                     {link.label}
                   </span>
                 </div>
+
                 <span
                   className="text-sm font-light transition-colors duration-200 group-hover:text-[#C0C0C0]"
                   style={{ color: "#7A7A7A" }}
@@ -170,9 +189,11 @@ export default function ContactSection() {
                   {link.handle}
                 </span>
               </div>
+
               <span
                 className="text-lg transition-transform duration-200 group-hover:translate-x-1"
                 style={{ color: "#D5851F" }}
+                aria-hidden="true"
               >
                 →
               </span>
@@ -193,15 +214,18 @@ export default function ContactSection() {
             className="font-mono text-xs"
             style={{ color: "#3A3A3A", letterSpacing: "0.1em" }}
           >
-            &copy; {new Date().getFullYear()} Nemi Sanghvi. Built with Next.js &amp; Motion.
+            &copy; {new Date().getFullYear()} Nemi Sanghvi. Built with Next.js
+            &amp; Motion.
           </p>
+
           <div className="flex items-center gap-3">
             <ConstructionLine length={24} opacity={0.15} />
+
             <span
               className="font-mono text-[10px] tracking-widest"
               style={{ color: "#3A3A3A", letterSpacing: "0.15em" }}
             >
-              Designed &amp; developed by Nemi Sanghvi.
+              Made with curiosity &amp; a little too much coffee.
             </span>
           </div>
         </motion.footer>
@@ -209,4 +233,3 @@ export default function ContactSection() {
     </section>
   );
 }
-

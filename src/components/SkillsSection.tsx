@@ -97,7 +97,7 @@ export default function SkillsSection() {
           viewport={VIEWPORT_ONCE}
         >
           <motion.div variants={fadeIn}>
-            <SectionLabel number="03" label="My Toolkit" />
+            <SectionLabel number="02" label="My Toolkit" />
           </motion.div>
           <motion.h2
             variants={fadeUp}

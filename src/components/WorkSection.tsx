@@ -244,7 +244,7 @@ export default function WorkSection() {
           viewport={VIEWPORT_ONCE}
         >
           <motion.div variants={fadeIn}>
-            <SectionLabel number="04" label="Selected Work" />
+            <SectionLabel number="03" label="Selected Work" />
           </motion.div>
           <motion.h2
             variants={fadeUp}
