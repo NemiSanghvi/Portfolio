@@ -1,40 +1,98 @@
 @import "tailwindcss";
 
+/* ============================================================
+   DESIGN TOKENS
+   ============================================================ */
 :root {
-  --background: #2A2A2A;
-  --foreground: #ededed;
+  --charcoal:      #2A2A2A;
+  --silver:        #C0C0C0;
+  --amber:         #D5851F;
+  --silver-dim:    #8A8A8A;
+  --silver-light:  #E8E8E8;
+  --charcoal-mid:  #333333;
+  --font-inter:    "Inter", system-ui, sans-serif;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-background: var(--charcoal);
+  --color-foreground: var(--silver);
+  --font-sans: var(--font-inter);
+}
+
+/* ============================================================
+   BASE
+   ============================================================ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
-  background-color: #2A2A2A;
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--charcoal);
+  color: var(--silver);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
+/* ============================================================
+   UTILITY — HIDE SCROLLBAR (Beyond section horizontal scroll)
+   ============================================================ */
+.hide-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* ============================================================
+   HERO SECTION
+   ============================================================ */
 .hero-section {
-  background-color: #2A2A2A;
-  background-image: url('/images/drafting-board.png');
+  position: relative;
+  background-color: var(--charcoal);
+  background-image: url("/images/drafting-board.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   min-height: 100svh;
 }
 
-.hero-name {
-  color: #C0C0C0;
+/* ============================================================
+   SECTION TYPOGRAPHY — defaults
+   ============================================================ */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 300;
+  margin: 0;
 }
 
-@media (min-width: 640px) {
-  .hero-name {
-    font-size: clamp(4rem, 12vw, 12rem);
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ============================================================
+   PREFERS-REDUCED-MOTION — disable all Motion.dev animations
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }
-
