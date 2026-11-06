@@ -86,17 +86,7 @@ export default function ProcessSection() {
       />
 
       {/* Large background number */}
-      <div
-        className="absolute top-12 right-8 md:right-16 select-none pointer-events-none"
-        aria-hidden="true"
-      >
-        <span
-          className="font-mono text-[10rem] md:text-[14rem] font-light leading-none"
-          style={{ color: "rgba(192,192,192,0.025)" }}
-        >
-          05
-        </span>
-      </div>
+     
 
       <div className="max-w-6xl mx-auto px-6 md:px-10">
         {/* Section header */}

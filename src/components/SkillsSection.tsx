@@ -169,7 +169,7 @@ export default function SkillsSection() {
                         size={skill.note === "primary" ? 5 : 3}
                       />
                       <span
-                        className="text-sm leading-none"
+                        className="text-lleading-none"
                         style={{
                           color:
                             skill.note === "primary"
@@ -182,7 +182,7 @@ export default function SkillsSection() {
                       {skill.note && skill.note !== "primary" && (
                         <span
                           className="font-mono text-[9px] tracking-widest ml-auto"
-                          style={{ color: "#4A4A4A" }}
+                          style={{ color: "#5c5c5c" }}
                         >
                           [{skill.note}]
                         </span>

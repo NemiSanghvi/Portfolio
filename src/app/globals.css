@@ -96,3 +96,13 @@ a {
     scroll-behavior: auto !important;
   }
 }
+
+::selection {
+  background-color: #D5851F;
+  color: #2A2A2A;
+}
+
+::-moz-selection {
+  background-color: #D5851F;
+  color: #2A2A2A;
+}

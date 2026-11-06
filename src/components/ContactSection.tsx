@@ -201,35 +201,7 @@ export default function ContactSection() {
           ))}
         </motion.div>
 
-        {/* Footer */}
-        <motion.footer
-          className="border-t flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pt-8"
-          style={{ borderColor: "rgba(192,192,192,0.08)" }}
-          variants={fadeIn}
-          initial="hidden"
-          whileInView="visible"
-          viewport={VIEWPORT_ONCE}
-        >
-          <p
-            className="font-mono text-xs"
-            style={{ color: "#3A3A3A", letterSpacing: "0.1em" }}
-          >
-            &copy; {new Date().getFullYear()} Nemi Sanghvi. Built with Next.js
-            &amp; Motion.
-          </p>
-
-          <div className="flex items-center gap-3">
-            <ConstructionLine length={24} opacity={0.15} />
-
-            <span
-              className="font-mono text-[10px] tracking-widest"
-              style={{ color: "#3A3A3A", letterSpacing: "0.15em" }}
-            >
-              Made with curiosity &amp; a little too much coffee.
-            </span>
-          </div>
-        </motion.footer>
-      </div>
+</div>
     </section>
   );
 }

@@ -273,7 +273,7 @@ export default function AboutSection() {
                 <AmberDot size={4} />
 
                 <span
-                  className="font-mono text-xs tracking-widest uppercase"
+                  className="font-mono text-s tracking-widest uppercase"
                   style={{
                     color: "#D5851F",
                     letterSpacing: "0.2em",
@@ -284,7 +284,7 @@ export default function AboutSection() {
               </div>
 
               <p
-                className="text-sm md:text-base leading-relaxed"
+                className="text-s md:text-base leading-relaxed"
                 style={{ color: "#7A7A7A" }}
               >
                 {item.value}
