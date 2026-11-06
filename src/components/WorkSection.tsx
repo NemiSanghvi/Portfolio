@@ -3,6 +3,7 @@
 
 import Image from "next/image";
 import { motion } from "motion/react";
+import { assetPath } from "@/lib/paths";
 
 import {
   SectionLabel,
@@ -37,7 +38,7 @@ const PROJECTS: Project[] = [
       "A movie-themed web application built with React and Tailwind CSS. It explores a visually engaging way to present movie-related content through a responsive frontend experience.",
     stack: ["React", "Tailwind CSS"],
     category: "Frontend Application",
-    image: "/images/movie-mania.png",
+    image: assetPath("/images/movie-mania.png"),
     href: "https://movie-mania-lake-omega.vercel.app/",
     imageAlt: "Movie Mania application interface",
   },
@@ -48,7 +49,7 @@ const PROJECTS: Project[] = [
       "An interactive flashcard learning application with a React frontend and a backend powered by Node.js, Express, and MongoDB Atlas. The project includes user authentication and full-stack application functionality.",
     stack: ["React", "Node.js", "Express.js", "MongoDB Atlas"],
     category: "Full-Stack Application",
-    image: "/images/flash-learn.png",
+    image: assetPath("/images/flash-learn.png"),
     href: "https://flashlearn-gamma.vercel.app/",
     imageAlt: "Flash Learn application interface",
   },
@@ -59,7 +60,7 @@ const PROJECTS: Project[] = [
       "A task management application built with React. Users can create tasks with descriptions and priority levels, mark them as complete, and delete them. The interface uses changing icons and colours to make task status easy to understand.",
     stack: ["React", "JavaScript"],
     category: "Task Management",
-    image: "/images/task-board.png",
+    image: assetPath("/images/task-board.png"),
     href: "https://task-board-sand.vercel.app/",
     imageAlt: "Task Board application interface",
   },
@@ -96,7 +97,7 @@ function ProjectCard({
         }}
       >
         <Image
-          src={project.image}
+          src={assetPath(project.image)}
           alt={project.imageAlt}
           fill
           sizes="(max-width: 1024px) 100vw, 50vw"

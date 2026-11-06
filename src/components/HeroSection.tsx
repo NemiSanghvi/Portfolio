@@ -3,6 +3,7 @@
 import { motion } from "motion/react";
 import { CornerBracket } from "@/components/DraftingElements";
 import dynamic from "next/dynamic";
+import { assetPath } from "@/lib/paths";
 
 const TechText = dynamic(() => import("./TechText"), { ssr: false });
 
@@ -10,9 +11,10 @@ export default function HeroSection() {
   return (
     <section
       id="hero"
-      className="relative flex min-h-[100svh] w-full flex-col items-center justify-center px-4 overflow-hidden"
+      className="hero-section relative flex min-h-[100svh] w-full flex-col items-center justify-center px-4 overflow-hidden"
       style={{
-        backgroundImage: "url('/images/drafting-board.png')",
+        backgroundImage: `url('${assetPath("/images/drafting-board.png")}')`,
+        ["--hero-bg" as string]: `url('${assetPath("/images/drafting-board.png")}')`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",

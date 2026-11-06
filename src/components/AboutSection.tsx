@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "motion/react";
+import { assetPath } from "@/lib/paths";
 
 import {
   SectionLabel,
@@ -197,7 +198,7 @@ export default function AboutSection() {
                     variants={portraitHover}
                   >
                     <Image
-                      src="/images/image.png"
+                      src={assetPath("/images/image.png")}
                       alt="Nemi Sanghvi"
                       fill
                       priority

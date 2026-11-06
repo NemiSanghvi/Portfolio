@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
+import { assetPath } from '@/lib/paths';
 
 import './BounceCards.css';
 
@@ -19,7 +20,11 @@ const parseTransform = value => {
   };
 };
 
-const toCard = item => (typeof item === 'string' ? { src: item, alt: '' } : { src: item?.src, alt: item?.alt ?? '' });
+const toCard = item => {
+  const rawSrc = typeof item === 'string' ? item : item?.src;
+  const alt = typeof item === 'string' ? '' : item?.alt ?? '';
+  return { src: rawSrc ? assetPath(rawSrc) : '', alt };
+};
 
 /**
  * @param {Object} props

@@ -59,7 +59,7 @@ body {
 .hero-section {
   position: relative;
   background-color: var(--charcoal);
-  background-image: url("/images/drafting-board.png");
+  background-image: var(--hero-bg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

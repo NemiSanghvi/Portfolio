@@ -4,7 +4,7 @@
 import { useState, useEffect } from "react";
 import dynamic from "next/dynamic";
 import { motion } from "motion/react";
-import { AmberDot, ConstructionLine } from "@/components/DraftingElements";
+import { AmberDot } from "@/components/DraftingElements";
 import {
   fadeUp,
   fadeIn,
@@ -208,7 +208,7 @@ export default function BeyondSection() {
             className="mt-5 max-w-lg text-sm md:text-base leading-relaxed"
             style={{ color: "#5A5A5A" }}
           >
-            There's more to me than the things I build. Music, fitness,
+            There&apos;s more to me than the things I build. Music, fitness,
             travel, food, and gaming are some of the things that make
             life interesting outside the screen.
           </motion.p>
