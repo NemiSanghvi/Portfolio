@@ -5,7 +5,7 @@ const nextConfig: NextConfig = {
   output: "export",
   basePath:
   process.env.NODE_ENV === "production"
-    ? "/nemi_portfolio"
+    ? "/Portfolio"
     : "",
   trailingSlash: true,
 

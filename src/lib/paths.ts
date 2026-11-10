@@ -1,4 +1,4 @@
-export const REPO_NAME = "nemi_portfolio";
+export const REPO_NAME = "Portfolio";
 
 export const BASE_PATH =
   process.env.NODE_ENV === "production" ? `/${REPO_NAME}` : "";
@@ -6,7 +6,7 @@ export const BASE_PATH =
 /**
  * Returns a properly prefixed asset path for local development and GitHub Pages.
  *
- * - Adds `/nemi_portfolio` to asset paths in production.
+ * - Adds `/Portfolio` to asset paths in production.
  * - Uses normal root-relative paths during local development.
  * - Handles paths with or without a leading slash.
  * - Does not accidentally create duplicate slashes.
@@ -14,7 +14,7 @@ export const BASE_PATH =
  *
  * Expected behavior:
  * - Development: `/images/movie-mania.png`
- * - Production:  `/nemi_portfolio/images/movie-mania.png`
+ * - Production:  `/Portfolio/images/movie-mania.png`
  */
 export function assetPath(path: string): string {
   if (!path) {
