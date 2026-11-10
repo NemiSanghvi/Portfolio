@@ -1,45 +1,17 @@
-export const REPO_NAME = "Portfolio";
-
-export const BASE_PATH =
-  process.env.NODE_ENV === "production" ? `/${REPO_NAME}` : "";
-
 /**
- * Returns a properly prefixed asset path for local development and GitHub Pages.
+ * Utility for constructing asset URLs.
  *
- * - Adds `/Portfolio` to asset paths in production.
- * - Uses normal root-relative paths during local development.
- * - Handles paths with or without a leading slash.
- * - Does not accidentally create duplicate slashes.
- * - Preserves external URLs (http/https/data/blob).
- *
- * Expected behavior:
- * - Development: `/images/movie-mania.png`
- * - Production:  `/Portfolio/images/movie-mania.png`
+ * For Vercel deployment we serve from the domain root, so no repository
+ * prefix is required. The helper ensures:
+ * - external URLs (http, https, data, blob, mailto, #) are returned unchanged
+ * - a leading slash is added if missing
+ * - empty input returns "/"
  */
 export function assetPath(path: string): string {
-  if (!path) {
-    return BASE_PATH || "/";
-  }
-
+  if (!path) return "/";
   // Preserve external URLs, data/blob URIs, and anchors
-  if (/^(https?:|data:|blob:|mailto:|#)/i.test(path)) {
-    return path;
-  }
-
+  if (/^(https?:|data:|blob:|mailto:|#)/i.test(path)) return path;
   // Remove any leading slashes to normalize
-  let clean = path.replace(/^\/+/, "");
-
-  // Prevent duplicate base path prefix if already present
-  if (clean.startsWith(`${REPO_NAME}/`)) {
-    clean = clean.slice(`${REPO_NAME}/`.length);
-  } else if (clean === REPO_NAME) {
-    clean = "";
-  }
-
-  if (!clean) {
-    return BASE_PATH || "/";
-  }
-
-  return BASE_PATH ? `${BASE_PATH}/${clean}` : `/${clean}`;
+  const clean = path.replace(/^\/+/, "");
+  return `/${clean}`;
 }
-
