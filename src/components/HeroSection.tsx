@@ -3,11 +3,32 @@
 import { motion } from "motion/react";
 import { CornerBracket } from "@/components/DraftingElements";
 import dynamic from "next/dynamic";
+import { useState, useEffect } from "react";
 import { assetPath } from "@/lib/paths";
 
 const TechText = dynamic(() => import("./TechText"), { ssr: false });
 
+/** Clamps fontSize to fit within the available viewport width at mount/resize. */
+function useHeroFontSize() {
+  const [fontSize, setFontSize] = useState(150);
+
+  useEffect(() => {
+    function update() {
+      // 20vw, min 72px (legible at 320px), max 150px (original desktop size)
+      const vw = window.innerWidth;
+      setFontSize(Math.round(Math.min(150, Math.max(72, vw * 0.2))));
+    }
+    update();
+    window.addEventListener("resize", update);
+    return () => window.removeEventListener("resize", update);
+  }, []);
+
+  return fontSize;
+}
+
 export default function HeroSection() {
+  const fontSize = useHeroFontSize();
+
   return (
     <section
       id="hero"
@@ -69,14 +90,15 @@ export default function HeroSection() {
           className="w-full"
           style={{
             transform: "rotate(-2deg)",
-            height: "clamp(120px, 25vw, 280px)",
+            // Container height tracks the responsive font size with a small buffer
+            height: `${fontSize + 24}px`,
             color: "#C0C0C0",
           }}
         >
           <TechText
             text="Nemi Sanghvi"
             fontWeight={600}
-            fontSize={150}
+            fontSize={fontSize}
             color="#C0C0C0"
             accentColor="#D5851F"
             reveal="letter"

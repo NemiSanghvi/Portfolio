@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useState, useEffect } from "react";
@@ -22,29 +21,31 @@ const BounceCards = dynamic(() => import("./BounceCards"), {
  */
 export const FUN_PHOTOGRAPHS = [
   {
-    src: "https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=800&q=80",
+    src: "/images/concert.jpg",
     alt: "Live music concert with stage lights and audience",
   },
   {
-    src: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=80",
-    alt: "Modern fitness gym with workout equipment",
+    src: "/images/trek.jpg",
+    alt: "Mountain trekking and scenic trail",
+  },
+
+  {
+    src: "/images/food.jpg",
+    alt: "Food and dining experience",
+  },
+
+  {
+    src: "/images/gaming.jpg",
+    alt: "Gaming setup and gameplay",
   },
   {
-    src: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80",
-    alt: "Mountain landscape surrounded by nature",
+    src: "/images/gym.jpg",
+    alt: "Fitness workout session",
   },
   {
-    src: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=800&q=80",
-    alt: "Food spread with a variety of dishes",
+    src: "/images/photo.jpg",
+    alt: "Camera and photography moments",
   },
-  {
-    src: "https://images.unsplash.com/photo-1593305841991-05c297ba4575?auto=format&fit=crop&w=800&q=80",
-    alt: "Gaming setup with monitor and gaming equipment",
-  },
-  {
-  src: "https://images.unsplash.com/photo-1516035069371-29a1b244cc32",
-  alt: "Camera and photography"
-}
 ];
 
 interface BounceConfig {
@@ -151,11 +152,11 @@ const INTERESTS = [
     body: "Stepping into different worlds, taking on challenges, and enjoying the stories and experiences that games have to offer.",
   },
   {
-  id: "photography",
-  label: "Photography",
-  note: "Finding beauty in the details",
-  body: "Capturing places, little details, and moments worth remembering. It's another way to explore the world and look at familiar things differently.",
-},
+    id: "photography",
+    label: "Photography",
+    note: "Finding beauty in the details",
+    body: "Capturing places, little details, and moments worth remembering. It's another way to explore the world and look at familiar things differently.",
+  },
 ];
 
 export default function BeyondSection() {
@@ -164,7 +165,7 @@ export default function BeyondSection() {
   return (
     <section
       id="beyond"
-      className="relative overflow-hidden py-24 md:py-36"
+      className="relative overflow-x-hidden py-24 md:py-36"
       style={{ backgroundColor: "#2A2A2A" }}
     >
       {/* Top separator */}
@@ -209,8 +210,8 @@ export default function BeyondSection() {
             style={{ color: "#5A5A5A" }}
           >
             There&apos;s more to me than the things I build. Music, fitness,
-            travel, food, and gaming are some of the things that make
-            life interesting outside the screen.
+            travel, food, and gaming are some of the things that make life
+            interesting outside the screen.
           </motion.p>
         </motion.div>
 
@@ -223,7 +224,6 @@ export default function BeyondSection() {
           viewport={VIEWPORT_ONCE}
         >
           {/* Subtle drafting caption */}
-        
 
           <div
             className="relative w-full flex justify-center items-center py-4 overflow-visible"
@@ -310,12 +310,9 @@ export default function BeyondSection() {
               >
                 {interest.body}
               </p>
-
-              
             </motion.div>
           ))}
         </motion.div>
-
       </div>
     </section>
   );

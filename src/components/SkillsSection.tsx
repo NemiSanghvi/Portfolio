@@ -3,6 +3,9 @@
 import { motion } from "motion/react";
 import { SectionLabel, AmberDot, MeasurementRule, ConstructionLine } from "@/components/DraftingElements";
 import { fadeUp, fadeIn, staggerChildren, VIEWPORT_ONCE } from "@/lib/animations";
+import SwipeButton from "@/components/animata/button/swipe-button";
+import { assetPath } from "@/lib/paths";
+
 
 interface Skill {
   name: string;
@@ -96,24 +99,41 @@ export default function SkillsSection() {
       <div className="max-w-6xl mx-auto px-6 md:px-10">
         {/* Section header */}
         <motion.div
-          className="mb-16"
+          className="mb-16 flex flex-col md:flex-row md:items-center justify-between gap-6"
           variants={staggerChildren}
           initial="hidden"
           whileInView="visible"
           viewport={VIEWPORT_ONCE}
         >
-          <motion.div variants={fadeIn}>
-            <SectionLabel number="02" label="My Toolkit" />
-          </motion.div>
-          <motion.h2
+          <div>
+            <motion.div variants={fadeIn}>
+              <SectionLabel number="02" label="My Toolkit" />
+            </motion.div>
+            <motion.h2
+              variants={fadeUp}
+              className="mt-6 text-3xl md:text-4xl xl:text-5xl font-light leading-tight"
+              style={{ color: "#C0C0C0", letterSpacing: "-0.02em" }}
+            >
+              The instruments
+              <br />
+              <span style={{ color: "#6A6A6A" }}>I reach for.</span>
+            </motion.h2>
+          </div>
+
+          <motion.div
             variants={fadeUp}
-            className="mt-6 text-3xl md:text-4xl xl:text-5xl font-light leading-tight"
-            style={{ color: "#C0C0C0", letterSpacing: "-0.02em" }}
+            className="self-start md:self-center flex-shrink-0"
           >
-            The instruments
-            <br />
-            <span style={{ color: "#6A6A6A" }}>I reach for.</span>
-          </motion.h2>
+            <SwipeButton
+              firstText="Download Resume"
+              secondText="Download Resume"
+              href={assetPath("/Nemi_Sanghvi_Resume.pdf")}
+              download="Nemi_Sanghvi_Resume.pdf"
+              className="border border-[#D5851F]/40 hover:border-[#D5851F] rounded-sm transition-colors duration-300"
+              firstClass="bg-[#242424] text-[#C0C0C0] px-5 py-2.5 text-sm font-sans font-medium flex items-center justify-center"
+              secondClass="bg-[#D5851F] text-[#2A2A2A] px-5 py-2.5 text-sm font-sans font-medium flex items-center justify-center"
+            />
+          </motion.div>
         </motion.div>
 
         {/* Toolkit grid — each category is a "card" styled like a labelled diagram */}
@@ -169,7 +189,7 @@ export default function SkillsSection() {
                         size={skill.note === "primary" ? 5 : 3}
                       />
                       <span
-                        className="text-lleading-none"
+                        className="text-sm leading-none"
                         style={{
                           color:
                             skill.note === "primary"

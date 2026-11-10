@@ -115,11 +115,12 @@ export default function Navigation() {
           ))}
         </ul>
 
-        {/* Mobile hamburger */}
+        {/* Mobile hamburger — 44×44px minimum touch target */}
         <button
-          className="relative z-10 md:hidden flex flex-col gap-1.5 p-2"
+          className="relative z-10 md:hidden flex flex-col items-center justify-center min-w-[44px] min-h-[44px] p-2.5 gap-1.5"
           onClick={() => setMenuOpen(!menuOpen)}
-          aria-label="Toggle menu"
+          aria-label={menuOpen ? "Close menu" : "Open menu"}
+          aria-expanded={menuOpen}
         >
           <motion.span
             className="block h-px w-5 origin-center"
@@ -153,6 +154,24 @@ export default function Navigation() {
         }}
         transition={{ duration: 0.3 }}
       >
+        {/* Explicit close button — top-right, 44×44px touch target */}
+        <button
+          className="absolute top-4 right-4 flex items-center justify-center min-w-[44px] min-h-[44px] p-2"
+          onClick={() => setMenuOpen(false)}
+          aria-label="Close menu"
+        >
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+            fill="none"
+            aria-hidden="true"
+          >
+            <line x1="2" y1="2" x2="18" y2="18" stroke="#8A8A8A" strokeWidth="1.5" strokeLinecap="round" />
+            <line x1="18" y1="2" x2="2" y2="18" stroke="#8A8A8A" strokeWidth="1.5" strokeLinecap="round" />
+          </svg>
+        </button>
+
         <ul className="flex flex-col items-center gap-8">
           {NAV_ITEMS.map((item, i) => (
             <motion.li

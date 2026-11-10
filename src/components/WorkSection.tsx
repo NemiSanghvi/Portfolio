@@ -97,7 +97,7 @@ function ProjectCard({
         }}
       >
         <Image
-          src={assetPath(project.image)}
+          src={project.image}
           alt={project.imageAlt}
           fill
           sizes="(max-width: 1024px) 100vw, 50vw"
